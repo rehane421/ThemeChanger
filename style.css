@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rancho', sans-serif;
+}
+section {
+    position: relative;
+    background: #c8dbe9;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.5s;
+}
+section.dark-theme {
+    background: rgba(19, 18, 18, 0.74);
+}
+section .card {
+    position: relative;
+    width: 300px;
+    height: 380px;
+    background: #fff;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.025);
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.5s;
+}
+section.dark-theme .card {
+    background: rgba(49, 49, 51, 0.74);
+}
+section .card .content,
+section .card .imgText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+section .card .imgText .imgBox {
+    position: relative;
+    width:120px;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+section .card .imgText .imgBox img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+section .card .imgText h3 {
+    font-weight: 500;
+    font-size: 1.4em;
+    line-height: 1.2em;
+    text-align: center;
+    color: #2b91e6;
+}
+
+section .card .imgText h3 span {
+    font-weight: 400;
+    font-size: 0.70em;
+    color: #5b6369;
+}
+section.dark-theme .imgText h3 span{
+    color: #ccc;
+}
+section .card .icons {
+    display: flex;
+    margin-top: 12px;
+}
+section .card .icons li {
+    list-style: none;
+}
+section .card .icons li a {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    color: rgb(55, 167, 241);
+    margin: 0 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background: #c8dbe9;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.5s;
+}
+section.dark-theme .card .icons li a {
+    background: rgb(79, 79, 83);
+}
+section .card .icons li a:hover{
+    color: #fff;
+}
+section .card .icons li a .fa {
+    position: relative;
+    z-index: 1000;
+}
+section .card .icons li a:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(54, 151, 230);
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 0.5s;
+}
+section .card .icons li a:hover:before{
+    transform: scale(1);
+}   
+
+.theme-change {
+    background: #d3e1eb;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+    transition: background 0.5s;
+}
+section.dark-theme .theme-change {
+    background: rgb(79, 79, 83);
+}
+.theme-change:before {
+    content: '\f186';
+    font-family: fontAwesome;
+    color: rgb(54, 151, 230);
+}
+section.dark-theme .theme-change:before {
+    content: '\f185';
+    color: cornsilk;
+}

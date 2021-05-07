@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Dark and Light theme using CSS</title>
+    <script src="https://use.fontawesome.com/cc0fa57493.js"></script>
+</head>
+
+<body>
+    <section class="section">
+        <div class="card">
+            <div class="theme-change"></div>
+            <div class="content">
+                <div class="imgText">
+                    <div class="imgBox">
+                        <img src="profile.png" alt="">
+                    </div>
+                    <h3>Ashish Kashyap<br>
+                        <span>Developer</span>
+                    </h3>
+                </div>
+                <ul class="icons">
+                    <li>
+                        <a href="#"><i class="fa fa-facebook-f"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <script>
+        const section = document.querySelector('.section');
+        const toggle = document.querySelector('.theme-change');
+        toggle.onclick = function () {
+            section.classList.toggle('dark-theme')
+        }
+    </script>
+</body>
+
+</html>
